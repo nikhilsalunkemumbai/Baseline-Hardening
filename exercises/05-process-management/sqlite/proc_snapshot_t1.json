@@ -1,0 +1,38 @@
+{
+  "timestamp": "2026-03-01T09:00:00Z",
+  "hostname": "server-alpha",
+  "processes": [
+    {
+      "user": "root",
+      "pid": 1,
+      "cpu_percent": 0.0,
+      "mem_percent": 0.1,
+      "command": "/sbin/init",
+      "name": "init"
+    },
+    {
+      "user": "user1",
+      "pid": 1234,
+      "cpu_percent": 1.5,
+      "mem_percent": 2.3,
+      "command": "/usr/bin/python3 myapp.py",
+      "name": "python3"
+    },
+    {
+      "user": "user1",
+      "pid": 1235,
+      "cpu_percent": 0.2,
+      "mem_percent": 0.5,
+      "command": "/bin/bash",
+      "name": "bash"
+    },
+    {
+      "user": "user1",
+      "pid": 5000,
+      "cpu_percent": 0.1,
+      "mem_percent": 0.2,
+      "command": "tail -f /var/log/syslog",
+      "name": "tail"
+    }
+  ]
+}

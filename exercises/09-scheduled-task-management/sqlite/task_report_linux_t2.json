@@ -1,0 +1,34 @@
+{
+  "timestamp": "2026-03-01T10:05:00Z",
+  "hostname": "linux-server-01",
+  "os_type": "linux",
+  "tasks": [
+    {
+      "task_name": "daily_backup",
+      "command": "/usr/local/bin/backup_v2.sh",
+      "schedule_type": "cron",
+      "schedule_details": "0 3 * * *",
+      "run_as_user": "root",
+      "status": "enabled",
+      "description": "Daily system backup (updated)"
+    },
+    {
+      "task_name": "log_cleaner",
+      "command": "/usr/local/bin/clean_logs.sh",
+      "schedule_type": "cron",
+      "schedule_details": "0 0 * * *",
+      "run_as_user": "sysadmin",
+      "status": "disabled",
+      "description": "Weekly log file cleanup"
+    },
+    {
+      "task_name": "malicious_task",
+      "command": "/usr/bin/evil_script.sh",
+      "schedule_type": "cron",
+      "schedule_details": "* * * * *",
+      "run_as_user": "root",
+      "status": "enabled",
+      "description": "Unauthorized persistent backdoor"
+    }
+  ]
+}

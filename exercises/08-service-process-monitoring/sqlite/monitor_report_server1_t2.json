@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-03-01T10:05:00Z",
+  "hostname": "web-server-01",
+  "service_process_status": [
+    { "name": "nginx", "type": "service", "status": "stopped", "pid": null, "cpu_percent": 0.0, "memory_mb": 0.0 },
+    { "name": "php-fpm", "type": "process", "status": "running", "pid": 2001, "cpu_percent": 6.3, "memory_mb": 210 }
+  ],
+  "health_check_results": [
+    { "check_type": "port", "target": "web-server-01:80", "status": "FAIL", "message": "Port closed", "latency_ms": null },
+    { "check_type": "http_url", "target": "http://web-server-01/health", "status": "FAIL", "message": "HTTP 503 Service Unavailable", "latency_ms": 120, "http_status_code": 503 }
+  ]
+}

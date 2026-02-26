@@ -1,0 +1,25 @@
+{
+  "timestamp": "2026-03-01T10:00:00Z",
+  "hostname": "linux-server-01",
+  "os_type": "linux",
+  "tasks": [
+    {
+      "task_name": "daily_backup",
+      "command": "/usr/local/bin/backup.sh",
+      "schedule_type": "cron",
+      "schedule_details": "0 2 * * *",
+      "run_as_user": "root",
+      "status": "enabled",
+      "description": "Daily system backup"
+    },
+    {
+      "task_name": "log_cleaner",
+      "command": "/usr/local/bin/clean_logs.sh",
+      "schedule_type": "cron",
+      "schedule_details": "0 0 * * *",
+      "run_as_user": "sysadmin",
+      "status": "enabled",
+      "description": "Weekly log file cleanup"
+    }
+  ]
+}

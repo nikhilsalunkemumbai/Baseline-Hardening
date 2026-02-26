@@ -1,0 +1,18 @@
+{
+  "timestamp": "2026-03-01T10:00:00Z",
+  "hostname": "web-server-01",
+  "files": [
+    {
+      "file_path": "/var/www/html/index.html",
+      "file_size": 1024,
+      "md5_hash": "d41d8cd98f00b204e9800998ecf8427e",
+      "sha256_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file_path": "/etc/nginx/nginx.conf",
+      "file_size": 512,
+      "md5_hash": "a1a2a3a4a5a6a7a8a9a0b1b2b3b4b5b6",
+      "sha256_hash": "b0c1c2c3c4c5c6c7c8c9d0d1d2d3d4d5e6e7e8e9f0f1f2f3f4f5f6f7f8f9g0g1"
+    }
+  ]
+}

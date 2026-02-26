@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-03-02T08:00:00Z",
+  "root_path": "./test_dir",
+  "algorithm": "sha256",
+  "files": [
+    {
+      "path": "test_dir/config/app.conf",
+      "name": "app.conf",
+      "size": 60,
+      "mtime": "2026-03-01T07:55:00",
+      "hash": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2"
+    },
+    {
+      "path": "test_dir/scripts/backup.sh",
+      "name": "backup.sh",
+      "size": 115,
+      "mtime": "2026-03-02T07:30:00",
+      "hash": "e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6"
+    },
+    {
+      "path": "test_dir/important.txt",
+      "name": "important.txt",
+      "size": 70,
+      "mtime": "2026-03-02T07:35:00",
+      "hash": "f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7"
+    },
+    {
+      "path": "test_dir/new_threat.txt",
+      "name": "new_threat.txt",
+      "size": 20,
+      "mtime": "2026-03-02T07:40:00",
+      "hash": "1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b"
+    }
+  ]
+}

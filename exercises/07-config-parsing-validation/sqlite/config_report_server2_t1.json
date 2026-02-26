@@ -1,0 +1,40 @@
+{
+  "timestamp": "2026-03-01T11:00:00Z",
+  "hostname": "db-server-01",
+  "config_file": "/opt/db/config.json",
+  "config_type": "json",
+  "parsed_config": {
+    "database": {
+      "host": "db.example.com",
+      "port": 3306,
+      "user": "appuser"
+    },
+    "security": {
+      "enable_https": false,
+      "min_tls_version": "TLSv1.1"
+    }
+  },
+  "validation_results": [
+    {
+      "key": "database.port",
+      "status": "FAIL",
+      "message": "Expected not '3306', found '3306'. Default port detected.",
+      "expected": "!3306",
+      "actual": "3306"
+    },
+    {
+      "key": "security.enable_https",
+      "status": "FAIL",
+      "message": "Expected 'true', found 'false'. HTTPS not enabled.",
+      "expected": "true",
+      "actual": "false"
+    },
+    {
+      "key": "security.min_tls_version",
+      "status": "FAIL",
+      "message": "Expected 'TLSv1.2' or higher, found 'TLSv1.1'. Weak TLS version.",
+      "expected": "TLSv1.2+",
+      "actual": "TLSv1.1"
+    }
+  ]
+}

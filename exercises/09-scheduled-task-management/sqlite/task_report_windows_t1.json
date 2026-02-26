@@ -1,0 +1,25 @@
+{
+  "timestamp": "2026-03-01T10:10:00Z",
+  "hostname": "windows-server-01",
+  "os_type": "windows",
+  "tasks": [
+    {
+      "task_name": "Microsoft\Windows\UpdateOrchestrator\Reboot_AC",
+      "command": "<SYSTEM32>\MusNotification.exe",
+      "schedule_type": "on_startup",
+      "schedule_details": "On startup",
+      "run_as_user": "SYSTEM",
+      "status": "enabled",
+      "description": "Reboots the device to complete an update."
+    },
+    {
+      "task_name": "MyCustomScript",
+      "command": "powershell.exe -File <SCRIPTS>\maintenance.ps1",
+      "schedule_type": "daily",
+      "schedule_details": "Daily at 3 AM",
+      "run_as_user": "AdminUser",
+      "status": "disabled",
+      "description": "Custom daily maintenance script"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-02-25T08:00:00Z",
+  "scan_duration_seconds": 5.2,
+  "targets_scanned": "192.168.1.100",
+  "ports_scanned": "22,80,443",
+  "results": [
+    {
+      "host": "192.168.1.100",
+      "host_status": "Up",
+      "ports": [
+        {"port": 22, "status": "Open"},
+        {"port": 80, "status": "Open"},
+        {"port": 443, "status": "Open"}
+      ]
+    }
+  ]
+}

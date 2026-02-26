@@ -1,0 +1,36 @@
+{
+  "timestamp": "2026-03-01T10:00:00Z",
+  "hostname": "web-server-01",
+  "config_file": "/etc/app/config.ini",
+  "config_type": "ini",
+  "parsed_config": {
+    "server": {
+      "port": "8080",
+      "bind_ip": "0.0.0.0"
+    },
+    "security": {
+      "permit_root_login": "yes",
+      "force_2fa": "no"
+    },
+    "logging": {
+      "level": "DEBUG",
+      "log_file": "/var/log/app.log"
+    }
+  },
+  "validation_results": [
+    {
+      "key": "security.permit_root_login",
+      "status": "FAIL",
+      "message": "Expected 'no', found 'yes'. Root login permitted.",
+      "expected": "no",
+      "actual": "yes"
+    },
+    {
+      "key": "logging.level",
+      "status": "FAIL",
+      "message": "Expected not 'DEBUG', found 'DEBUG'. Log level is DEBUG.",
+      "expected": "!DEBUG",
+      "actual": "DEBUG"
+    }
+  ]
+}

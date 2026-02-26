@@ -1,0 +1,59 @@
+# CIS Ubuntu Linux 20.04 LTS Benchmark - Simplified Level 1 Policy
+
+# This YAML file defines a simplified subset of CIS Level 1 controls
+# for Ubuntu Linux 20.04 LTS, focusing on controls that can be
+# audited using the cross-platform utility snippets.
+
+policy_name: "CIS Ubuntu 20.04 LTS Level 1 - Simplified"
+version: "1.1"
+description: "A selection of critical security configurations for Ubuntu Linux 20.04 LTS with remediation guidance."
+source: "CIS Ubuntu Linux 20.04 LTS Benchmark v2.0.0 (Hypothetical Subset)"
+
+controls:
+  - id: "5.2.10"
+    title: "Ensure password hashing algorithm is SHA-512"
+    category: "Configure PAM"
+    severity: "High"
+    check_type: "config_file_value"
+    target: "/etc/login.defs"
+    parameter: "ENCRYPT_METHOD"
+    expected_value: "SHA512"
+    audit_snippet_relevance: "Configuration File Parsing"
+    rationale: "Using strong hashing algorithms protects against password cracking."
+    remediation_guidance: "Edit /etc/login.defs and set ENCRYPT_METHOD to SHA512. Run 'sudo sed -i \"s/^ENCRYPT_METHOD.*/ENCRYPT_METHOD SHA512/\" /etc/login.defs'."
+
+  - id: "6.2.1"
+    title: "Ensure password expiration is 90 days or less"
+    category: "User and Group Settings"
+    severity: "Medium"
+    check_type: "user_attribute_value"
+    target: "all_users" # Applies to all user accounts
+    parameter: "PASS_MAX_DAYS"
+    expected_value: "<=90" # Numeric comparison
+    audit_snippet_relevance: "User/Group Management"
+    rationale: "Regular password changes reduce the risk of compromised passwords."
+    remediation_guidance: "Update /etc/login.defs: 'sudo sed -i \"s/^PASS_MAX_DAYS.*/PASS_MAX_DAYS 90/\" /etc/login.defs'. For existing users: 'chage --maxdays 90 <user>'."
+
+  - id: "3.4.1"
+    title: "Ensure IP forwarding is disabled"
+    category: "Network Configuration"
+    severity: "High"
+    check_type: "kernel_parameter_value"
+    target: "/etc/sysctl.conf"
+    parameter: "net.ipv4.ip_forward"
+    expected_value: "0"
+    audit_snippet_relevance: "Configuration File Parsing, System Information Snapshot"
+    rationale: "Disabling IP forwarding prevents the system from acting as a router, reducing network attack surface."
+    remediation_guidance: "Set net.ipv4.ip_forward=0 in /etc/sysctl.conf and run 'sudo sysctl -w net.ipv4.ip_forward=0'."
+
+  - id: "2.2.1.2"
+    title: "Ensure xinetd is not installed"
+    category: "Special Services"
+    severity: "Medium"
+    check_type: "service_process_presence"
+    target: "xinetd"
+    parameter: "installed_status" # Or running_status
+    expected_value: "not_installed"
+    audit_snippet_relevance: "Service/Process Monitoring"
+    rationale: "Removing unnecessary services reduces the attack surface."
+    remediation_guidance: "Uninstall xinetd using the package manager: 'sudo apt-get purge xinetd'."

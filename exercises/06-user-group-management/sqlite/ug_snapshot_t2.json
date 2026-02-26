@@ -1,0 +1,52 @@
+{
+  "timestamp": "2026-03-01T11:00:00Z",
+  "hostname": "server-alpha",
+  "users": [
+    {
+      "username": "root",
+      "uid": 0,
+      "gid": 0,
+      "home_dir": "/root",
+      "shell": "/bin/bash",
+      "account_active": true
+    },
+    {
+      "username": "user1",
+      "uid": 1001,
+      "gid": 1001,
+      "home_dir": "/home/user1",
+      "shell": "/bin/bash",
+      "account_active": true
+    },
+    {
+      "username": "admin",
+      "uid": 1003,
+      "gid": 1003,
+      "home_dir": "/home/admin",
+      "shell": "/bin/bash",
+      "account_active": true
+    }
+  ],
+  "groups": [
+    {
+      "groupname": "root",
+      "gid": 0,
+      "members": ["root"]
+    },
+    {
+      "groupname": "user1",
+      "gid": 1001,
+      "members": ["user1"]
+    },
+    {
+      "groupname": "developers",
+      "gid": 2000,
+      "members": ["user1"]
+    },
+    {
+      "groupname": "ops",
+      "gid": 2001,
+      "members": ["admin", "user1"]
+    }
+  ]
+}

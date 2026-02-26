@@ -1,0 +1,41 @@
+{
+  "timestamp": "2026-02-26T08:00:00Z",
+  "system_info": {
+    "os": {
+      "system": "Linux",
+      "node_name": "server-alpha",
+      "release": "5.15.0-89-generic",
+      "version": "Ubuntu 22.04 LTS",
+      "architecture": "64bit"
+    },
+    "cpu": {
+      "model_name": "Intel(R) Core(TM) i7 CPU",
+      "cpus_total": 8
+    },
+    "memory": {
+      "total_memory_gb": "32.00 GB",
+      "free_memory_gb": "18.00 GB"
+    },
+    "disks": [
+      {
+        "mount_point": "/",
+        "size_gb": "500.00 GB",
+        "free_space_gb": "280.00 GB"
+      },
+      {
+        "mount_point": "/var",
+        "size_gb": "100.00 GB",
+        "free_space_gb": "45.00 GB"
+      }
+    ],
+    "network_interfaces": [
+      {
+        "name": "eth0",
+        "ipv4_addresses": ["192.168.1.100"],
+        "mac_address": "00:11:22:33:44:55"
+      }
+    ],
+    "uptime_seconds": 172800,
+    "processes_count": 160
+  }
+}

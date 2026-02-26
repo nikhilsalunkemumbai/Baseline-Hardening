@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+ENV/
+
+# SQLite
+*.db
+*.sqlite
+*.sqlite3
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Audit Reports (Temporary)
+audit_report.json
+*.log
+
+# Windows PowerShell local history
+.history/

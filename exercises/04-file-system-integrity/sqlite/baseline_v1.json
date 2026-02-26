@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-03-01T08:00:00Z",
+  "root_path": "./test_dir",
+  "algorithm": "sha256",
+  "files": [
+    {
+      "path": "test_dir/config/app.conf",
+      "name": "app.conf",
+      "size": 60,
+      "mtime": "2026-03-01T07:55:00",
+      "hash": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2"
+    },
+    {
+      "path": "test_dir/logs/error.log",
+      "name": "error.log",
+      "size": 86,
+      "mtime": "2026-03-01T07:56:00",
+      "hash": "b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3"
+    },
+    {
+      "path": "test_dir/scripts/backup.sh",
+      "name": "backup.sh",
+      "size": 100,
+      "mtime": "2026-03-01T07:57:00",
+      "hash": "c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4"
+    },
+    {
+      "path": "test_dir/important.txt",
+      "name": "important.txt",
+      "size": 52,
+      "mtime": "2026-03-01T07:58:00",
+      "hash": "d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-03-01T10:00:00Z",
+  "hostname": "web-server-01",
+  "service_process_status": [
+    { "name": "nginx", "type": "service", "status": "running", "pid": 1001, "cpu_percent": 2.5, "memory_mb": 150 },
+    { "name": "php-fpm", "type": "process", "status": "running", "pid": 2001, "cpu_percent": 5.1, "memory_mb": 200 }
+  ],
+  "health_check_results": [
+    { "check_type": "port", "target": "web-server-01:80", "status": "PASS", "message": "Port open", "latency_ms": 1 },
+    { "check_type": "http_url", "target": "http://web-server-01/health", "status": "PASS", "message": "HTTP 200 OK", "latency_ms": 25, "http_status_code": 200 }
+  ]
+}

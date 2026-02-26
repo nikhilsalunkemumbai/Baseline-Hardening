@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-03-01T10:10:00Z",
+  "hostname": "db-server-01",
+  "service_process_status": [
+    { "name": "mysqld", "type": "service", "status": "running", "pid": 3001, "cpu_percent": 15.0, "memory_mb": 1024 }
+  ],
+  "health_check_results": [
+    { "check_type": "port", "target": "db-server-01:3306", "status": "PASS", "message": "Port open", "latency_ms": 2 },
+    { "check_type": "http_url", "target": "http://db-server-01:8080/metrics", "status": "PASS", "message": "HTTP 200 OK", "latency_ms": 30, "http_status_code": 200 }
+  ]
+}

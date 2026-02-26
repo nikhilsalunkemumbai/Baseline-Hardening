@@ -1,0 +1,18 @@
+{
+  "timestamp": "2026-03-01T10:10:00Z",
+  "hostname": "db-server-01",
+  "files": [
+    {
+      "file_path": "/var/lib/mysql/my.cnf",
+      "file_size": 2048,
+      "md5_hash": "baba1234abcd5678efgh9012ijkl3456",
+      "sha256_hash": "7890abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890"
+    },
+    {
+      "file_path": "/usr/local/bin/backup_db.sh",
+      "file_size": 256,
+      "md5_hash": "fedcba9876543210fedcba9876543210",
+      "sha256_hash": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
+    }
+  ]
+}
