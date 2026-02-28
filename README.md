@@ -2,6 +2,13 @@
 
 A portable library of IT utility designs, tutorials, and exercises for infrastructure resilience and security automation.
 
+---
+
+### **⚠️ Disclaimer**
+**This toolkit is provided for educational and administrative purposes only.** Automating security configurations or hardware management carries inherent risks. Always test scripts in a non-production environment before deployment. The authors are not responsible for any system downtime, data loss, or hardware issues resulting from the use of these tools.
+
+---
+
 ## 🚀 Quick Links
 *   **[Fundamentals](./fundamentals.md)**: Core pillars and the 11-design strategy.
 *   **[Setup Guide](./setup.md)**: Preparing Python, PowerShell, and Bash.
